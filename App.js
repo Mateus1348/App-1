@@ -1,20 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, View } from 'react-native';
+import Notas from './src/components/Notas';
+import Head from './src/components/Head';
+import Menu from './src/components/Menu';
+import VerificarNumeros from './src/components/VerificarNumeros';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView>
+      <View>
+        <Head></Head>
+      </View>
+      <View>
+        <Notas></Notas>
+      </View>
+      <View>
+        <VerificarNumeros></VerificarNumeros>
+      </View>
+      <View>
+        <Menu></Menu>
+      </View>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
+
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
