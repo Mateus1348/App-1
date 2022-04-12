@@ -7,7 +7,7 @@ import VerificarNumeros from './src/components/VerificarNumeros';
 
 export default function App() {
   return (
-    <SafeAreaView style={style.container}>
+    <SafeAreaView style={styles.container}>
         <Head></Head>
         <Notas></Notas>
         <VerificarNumeros></VerificarNumeros>
@@ -18,10 +18,11 @@ export default function App() {
   );
 }
 
-const style=StyleSheet.create({
-  container:{
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
+    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
+    justifyContent: 'center',
+  },
+});

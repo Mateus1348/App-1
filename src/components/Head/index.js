@@ -6,9 +6,7 @@ import { styles } from './styles';
 const Head = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-                <Text style={styles.texto}>Home</Text>
-            </View>
+            <Text style={styles.text}>Home</Text>
         </View>
     );
 }
