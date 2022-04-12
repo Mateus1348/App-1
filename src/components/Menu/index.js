@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+
+import { styles } from './styles';
 
 const Menu = () => {
     return (
@@ -13,18 +15,5 @@ const Menu = () => {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        borderWidth: 1,
-        backgroundColor: 'white',
-        height: 60,
-        paddingHorizontal: 20,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    },
-});
 
 export default Menu;
