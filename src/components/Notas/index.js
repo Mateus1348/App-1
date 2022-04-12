@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
+import { styles } from './styles';
+
 const Notas = () => {
 
     const [nota1, setNota1] = useState("")
@@ -9,75 +11,58 @@ const Notas = () => {
     const [resultado, setResultado] = useState(0)
 
     const media = () => {
-        setResultado( (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) ) / 3)
+        setResultado( (Number(nota1) + Number(nota2) + Number(nota3) ) / 3)
     }
   
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Calculando Média</Text>
+
+        <Text style={styles.tittle}>Calculando Média</Text>
+
         <TextInput style={styles.input}
             value={nota1}
+            maxLength={2}
             onChangeText={(int) => setNota1(int)}
             placeholder="Digite a 1ª nota"
-            keyboardType='numeric'
+            keyboardType="numeric"
         />
+
         <TextInput style={styles.input}
             value={nota2}
+            maxLength={2}
             onChangeText={(int) => {setNota2(int)}}
             placeholder="Digite a 2ª nota"
             keyboardType="numeric"
         />
+
         <TextInput style={styles.input}
             value={nota3}
+            maxLength={2}
             onChangeText={(int) => {setNota3(int)}}
             placeholder="Digite a 3ª nota"
             keyboardType="numeric"
         />
-        <Button 
+
+        <Button
             title="Calcular"
+            color="red"
             onPress={media}
         />
-        <Text>Sua média é: <TextInput style={styles.inputMedia}
-            value={resultado}
-            onChangeText={(int)=>{setResultado(int)}}
-        /></Text>
-        <Text>Você foi {media < 5 ? (
-            <Text >Reprovado</Text>
-        ) : media >= 5 && media < 7 ? (
-            <Text >Recuperação</Text>
-        ) : media >= 7 ? (
-            <Text >Aprovado</Text>
+
+        <Text>Sua média é: {resultado}</Text>
+
+        {resultado < 5 ? (
+            <Text style={styles.reprovado}>Reprovado</Text>
+        ) : resultado >= 5 && resultado < 7 ? (
+            <Text style={styles.recuperacao}>Recuperação</Text>
+        ) : resultado >= 7 ? (
+            <Text style={styles.aprovado}>Aprovado</Text>
         ) : (
-            <Text >Não foi possível calcular</Text>
-        )}</Text>
+            <Text>Não foi possível calcular</Text>
+        )}
+
       </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 50,
-    },
-    input: {
-        height: 20,
-        margin: 5,
-        borderWidth: 1,
-        padding: 10,
-        color: 'blue'
-    },
-    inputMedia:{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-,       color: 'blue'
-    },
-    text:{
-        fontSize: 20,
-    },
-});
 
 export default Notas;
