@@ -1,17 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 const Notas = () => {
 
-    const [nota1, setNota1] = React.useState("")
-    const [nota2, setNota2] = React.useState("")
-    // const [result, setResult] = React.useState(0)
-    const [resultado, setResultado] = React.useState(0)
-    const [divisao] = React.useState(2)
+    const [nota1, setNota1] = useState("")
+    const [nota2, setNota2] = useState("")
+    const [resultado, setResultado] = useState(0)
 
     const media = () => {
-        setResultado((parseFloat(nota1)+parseFloat(nota2)) / parseFloat(divisao))
-        // setResultado(parseFloat(result) / (divisao))
+        setResultado((parseFloat(nota1)+parseFloat(nota2)) / 2)
     }
   
     return (
@@ -19,7 +16,7 @@ const Notas = () => {
         <Text style={styles.text}>Calculando Média</Text>
         <TextInput style={styles.input}
             value={String(nota1)}
-            onChangeText={(texto)=>{setNota1(texto)}}
+            onChangeText={(texto) => setNota1(texto)}
             placeholder="Digite a 1ª nota"
             keyboardType='numeric'
         />
@@ -55,6 +52,7 @@ const styles = StyleSheet.create({
         margin: 5,
         borderWidth: 1,
         padding: 10,
+        color: 'blue'
     },
     text:{
         fontSize: 20,

@@ -7,19 +7,11 @@ import VerificarNumeros from './src/components/VerificarNumeros';
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <View>
+    <SafeAreaView style={{flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Head></Head>
-      </View>
-      <View>
         <Notas></Notas>
-      </View>
-      <View>
         <VerificarNumeros></VerificarNumeros>
-      </View>
-      <View>
         <Menu></Menu>
-      </View>
       <StatusBar style="auto" />
     </SafeAreaView>
 
