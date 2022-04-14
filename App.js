@@ -9,10 +9,10 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scroll}>
-        <Head></Head>
-        <Notas></Notas>
-        <VerificarNumeros></VerificarNumeros>
-        <Menu></Menu>
+        <Head/>
+        <Notas/>
+        <VerificarNumeros/>
+        <Menu/>
       </ScrollView>
     </SafeAreaView>
     
