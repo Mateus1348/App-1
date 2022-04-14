@@ -6,6 +6,6 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around'
     }
 });

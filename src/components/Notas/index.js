@@ -49,7 +49,7 @@ const Notas = () => {
             onPress={media}
         />
 
-        <Text>Sua média é: {resultado}</Text>
+        <Text>Sua média é: {resultado.toFixed(2)}</Text>
 
         {resultado < 5 ? (
             <Text style={styles.reprovado}>Reprovado</Text>

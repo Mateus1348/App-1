@@ -4,9 +4,8 @@ export const styles = StyleSheet.create({
     container:{
         flex: 1,
         width: '100%',
-        backgroundColor: 'orange',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     text:{
         fontSize: 45

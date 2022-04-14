@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { styles } from './styles';
 
 const Head = () => {
     return (
-        <View style={styles.container}>
+        <LinearGradient style={styles.container} colors={['#FF4500', '#FFA500']} start={{x:2, y:0}} end={{x:0, y:1}}>
             <Text style={styles.text}>Home</Text>
-        </View>
+        </LinearGradient>
     );
 }
 
