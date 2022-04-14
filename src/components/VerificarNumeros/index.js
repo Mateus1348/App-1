@@ -12,14 +12,14 @@ const VerificarNumeros = () => {
 
     function verificar() {
         
-        if (num1>0 && num1<=9) {
-          setresultado('Este número está entre 0 e 9')
+        if (num1>1 && num1<=10) {
+          setresultado('O número está entre 1 e 10')
          
-        } else if (num2>10 && num2<=19) {
-          setresultado('Este número está entre 10 e 19')
+        } else if (num2>11 && num2<=29) {
+          setresultado('O número está entre 11 e 20')
           
-        }else if (num3>20) {
-          setresultado('Este número é maior que 20')
+        }else if (num3>21) {
+          setresultado('O número é maior que 21')
         }
       }
   
@@ -54,6 +54,7 @@ const VerificarNumeros = () => {
 
             <Button
                 title="Verificar"
+                color={'green'}
                 onPress={verificar}
             />
 

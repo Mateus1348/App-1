@@ -8,7 +8,7 @@ const Notas = () => {
     const [nota1, setNota1] = useState("")
     const [nota2, setNota2] = useState("")
     const [nota3, setNota3] = useState("")
-    const [resultado, setResultado] = useState(0)
+    const [resultado, setResultado] = useState(0);
 
     const media = () => {
         setResultado( (Number(nota1) + Number(nota2) + Number(nota3) ) / 3)
